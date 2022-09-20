@@ -1,6 +1,6 @@
-Go Installation
+## Go Installation
 
-add path golang mac
+### add path golang mac
 ---
 cd ~
 echo "export GOPATH=/Users/arif/Documents/go" >> .bash_profile
