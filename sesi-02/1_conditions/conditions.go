@@ -7,8 +7,8 @@ func main() {
 	//Temporary Variable
 	var currentYear = 2021
 
-	if age := currentYear - 1998; age < 17 {
-		fmt.Println("Kamu belum boleh membuat kartu sim")
+	if age := currentYear - 2010; age < 17 {
+		fmt.Printf("Kamu belum boleh membuat kartu sim karena umur anda => %d\n", age)
 	} else {
 		fmt.Println("Kamu sudah boleh membuat kartu sim")
 	}
