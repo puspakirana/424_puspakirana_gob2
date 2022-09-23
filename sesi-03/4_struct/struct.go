@@ -40,7 +40,7 @@ func main() {
 	employee1.division = "Fashion Design"
 	var employee2 = Employee{name: "Merida", age: 17, division: "War General and City Safety"}
 	fmt.Printf("Employee1: %+v\n", employee1)
-	fmt.Printf("Employee: %+v\n", employee2)
+	fmt.Printf("Employee2: %+v\n", employee2)
 	fmt.Println(strings.Repeat("-", 25))
 
 	//Pointer to a struct
@@ -59,7 +59,7 @@ func main() {
 	employee5.person.name = "Elsa"
 	employee5.person.age = 25
 	employee5.division = "Winter Guardian"
-	fmt.Printf("%+v", employee5)
+	fmt.Printf("%+v \n", employee5)
 	fmt.Println(strings.Repeat("-", 25))
 
 	//Anonymous Struct
