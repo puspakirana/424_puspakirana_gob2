@@ -1,4 +1,4 @@
-# Summary Sesi 2
+# Summary Sesi 2 - Fundamental GO Programming
 
 ## Condition
 Kondisional pada pemrograman dapat digunakan untuk mengatur alur dari suatu program. Pada bahasa Go, terdapat 2 macam kondisional yang dapat kita pakai yaitu if else dan switch
