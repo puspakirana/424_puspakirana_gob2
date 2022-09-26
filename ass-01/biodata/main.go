@@ -40,7 +40,7 @@ func main() {
 
 func getParticipant(p []Participant, no_absen int) {
 
-	if no_absen <= 10 {
+	if no_absen <= len(p) {
 		fmt.Println("Data Siswa:")
 		fmt.Println("No Absen:", p[no_absen-1].No_Absen)
 		fmt.Println("Nama:", p[no_absen-1].Nama)
