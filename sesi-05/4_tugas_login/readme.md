@@ -4,9 +4,18 @@ go mod init tugas
 go get github.com/howeyc/gopass
 
 ### Account Validation
-Account validation must use OR (||) operator because there might be a case that user input only one wrong data (either username/password). If we use AND (&&) operator for that condition, it will always return False.
+1. Checking with not equals to (!=) relational operator
+When we use not equals to (!=), account validation must use OR (||) logical operator because there might be a case that user input only one wrong data (either username/password). If we use AND (&&) logical operator for that condition, it will always return False.
 
 > if username != "Puspa" || p != "1234"
+
+2. Checking with equals to (==) relational operator
+When we use equals to (==), the operator that should be used is AND (&&) logical operator, because both data (username & password) must be true. AND (&&) logical opertaor will return False if one or both condition are not fulfilled.
+
+> if username == "Puspa" && p == "1234"
+
+Note:
+> Logical operators are related to truth table. Learn more here: <https://en.wikipedia.org/wiki/Truth_table>
 
 ### How to run the program
 1. Open terminal
