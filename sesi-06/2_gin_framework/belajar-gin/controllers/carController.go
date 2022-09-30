@@ -118,3 +118,13 @@ func DeleteCar(ctx *gin.Context) {
 		"message": fmt.Sprintf("car with id %v has been successfully deleted", carID),
 	})
 }
+
+func GetAllCar(ctx *gin.Context) {
+	var carData []Car
+
+	carData = CarDatas
+
+	ctx.JSON(http.StatusOK, gin.H{
+		"cars": carData,
+	})
+}
