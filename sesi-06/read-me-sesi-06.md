@@ -86,4 +86,3 @@ Gin adalah sebuah framework untuk bahasa Go yang digunakan untuk keperluan http 
 6. Buat file carController.go di dalam folder controllers
 
 7. Buat file carRouter.go di dalam folder routers
-
