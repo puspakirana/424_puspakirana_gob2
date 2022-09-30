@@ -65,3 +65,25 @@ buka URL: http://localhost:8080/employees
 
 
 ## Gin Framework
+Gin adalah sebuah framework untuk bahasa Go yang digunakan untuk keperluan http routing.
+
+**Membuat project dengan gin framework**
+
+1. Buat folder belajar-gin
+> mkdir belajar-gin
+
+2. Masuk ke folder tersebut
+> cd belajar-gin
+
+3. Buat go.mod
+> go mod init belajar-gin
+
+4. Instalasi gin
+> go get -u github.com/gin-gonic/gin
+
+5. Buat folder controllers dan routes
+
+6. Buat file carController.go di dalam folder controllers
+
+7. Buat file carRouter.go di dalam folder routers
+
