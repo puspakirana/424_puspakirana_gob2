@@ -1,7 +1,9 @@
 ### Install Package gopass
 
+```
 go mod init tugas
 go get github.com/howeyc/gopass
+```
 
 ### Account Validation
 1. Checking with not equals to (!=) relational operator
