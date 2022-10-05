@@ -134,5 +134,30 @@ func deleteOrder(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
+// UpdateOrder godoc
+// @Summary Update order identified by the given orderId
+// @Description Update the order corresponding to the input orderId
+// @Tags orders
+// @Accept  json
+// @Produce  json
+// @Param orderId path int true "ID of the order to be updated"
+// @Success 200 {object} Order
+// @Router /orders/{orderId} [put]
+func updateOrder(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Type", "application/json")
+	params := mux.Vars(r)
+	inputOrderID := params["orderId"]
+	for i, order := range orders {
+		if order.OrderID == inputOrderID {
+			orders = append(orders[:i], orders[i+1:]...)
+			var updatedOrder Order
+			json.NewDecoder(r.Body).Decode(&updatedOrder)
+			orders = append(orders, updatedOrder)
+			json.NewEncoder(w).Encode(updatedOrder)
+			return
+		}
+	}
+}
+
 //Swagger:
 //setiap ada perubahan harus jalankan command: swag init -g main.go
