@@ -140,6 +140,38 @@
                     }
                 }
             }
+        },
+        "/orders/{orderId}": {
+            "put": {
+                "description": "Update the order corresponding to the input orderId",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "orders"
+                ],
+                "summary": "Update order identified by the given orderId",
+                "parameters": [
+                    {
+                        "type": "integer",
+                        "description": "ID of the order to be updated",
+                        "name": "orderId",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/main.Order"
+                        }
+                    }
+                }
+            }
         }
     },
     "definitions": {

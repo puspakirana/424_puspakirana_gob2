@@ -119,4 +119,25 @@ paths:
       summary: Create a new order
       tags:
       - orders
+  /orders/{orderId}:
+    put:
+      consumes:
+      - application/json
+      description: Update the order corresponding to the input orderId
+      parameters:
+      - description: ID of the order to be updated
+        in: path
+        name: orderId
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/main.Order'
+      summary: Update order identified by the given orderId
+      tags:
+      - orders
 swagger: "2.0"

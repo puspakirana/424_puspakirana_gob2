@@ -50,7 +50,8 @@ func main() {
 	router.HandleFunc("/order/{orderId}", getOrderWhere).Methods("GET")
 	//delete where
 	router.HandleFunc("/order/{orderId}", getOrderWhere).Methods("DELETE")
-
+	// update
+	router.HandleFunc("/orders/{orderId}", updateOrder).Methods("PUT")
 	//swagger
 	router.PathPrefix("/swagger").Handler(httpSwagger.WrapHandler)
 	//call to browser http://loalhost:8080/swagger/index.html
