@@ -1,8 +1,8 @@
 package main
 
 import (
-	"4_practice/config"
-	"4_practice/controllers"
+	"practice/config"
+	"practice/controllers"
 
 	"github.com/gin-gonic/gin"
 	_ "github.com/go-sql-driver/mysql"
