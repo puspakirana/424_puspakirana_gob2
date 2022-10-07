@@ -12,7 +12,7 @@
 ## Postman Result
 <https://github.com/puspakirana/424_puspakirana_gob2/tree/master/sesi-08/practice/postman>
 
-## Error found during development
+## Errors found during development
 
 1. Folder name
 ```
