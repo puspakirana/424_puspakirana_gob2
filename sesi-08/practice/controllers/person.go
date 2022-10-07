@@ -3,7 +3,8 @@ package controllers
 import (
 	"net/http"
 
-	"../structs"
+	"practice/structs"
+
 	"github.com/gin-gonic/gin"
 )
 
@@ -14,7 +15,8 @@ func (idb *InDB) GetPerson(c *gin.Context) {
 		result gin.H
 	)
 	id := c.Param("id")
-	err := idb.DB.Where("id = ?", id).First(&person).Error
+
+	err := idb.DB.First(&person, id).Error
 	if err != nil {
 		result = gin.H{
 			"result": err.Error(),
@@ -22,8 +24,8 @@ func (idb *InDB) GetPerson(c *gin.Context) {
 		}
 	} else {
 		result = gin.H{
-			"result": err.Error(),
-			"count":  1,
+			"result": person,
+			"count":  len(id),
 		}
 	}
 
