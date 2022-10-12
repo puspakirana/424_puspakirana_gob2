@@ -1,6 +1,7 @@
 package service
 
 import (
+	"hello-mock/entity"
 	"hello-mock/repository"
 	"testing"
 
@@ -19,5 +20,23 @@ func TestProductServiceGetOneProductNotFound(t *testing.T) {
 	assert.Nil(t, product)
 	assert.NotNil(t, err)
 	assert.Equal(t, "product not found", err.Error(), "Error response has to be 'product not found'")
+
+}
+
+func TestProductServiceGetOneProduct(t *testing.T) {
+	product := entity.Product{
+		Id:   "2",
+		Name: "Kaca mata",
+	}
+
+	productRepository.Mock.On("FindById", "2").Return(product)
+
+	result, err := productService.GetOneProduct("2")
+	assert.Nil(t, err)
+	assert.NotNil(t, result)
+
+	assert.Equal(t, product.Id, result.Id, "result has to be '2'")
+	assert.Equal(t, product.Name, result.Name, "result has to be 'Kaca Mata'")
+	assert.Equal(t, &product, result, "result has to be a product data with id '2'")
 
 }
