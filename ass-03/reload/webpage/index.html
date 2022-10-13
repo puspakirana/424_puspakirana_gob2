@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water & Wind Status Auto Reload</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1>Water & Wind Status</h1>
+            </div>
+            <div class="col" style="text-align: center;">
+                <div class="title">
+                    <div class="colTitle">
+                        <h2>Water</h2>
+                    </div>
+                    <div class="colTitle">
+                        <h2>Wind</h2>
+                    </div>
+                </div>
+                <div class="card card1" id="card1">
+                    <h2 id="water">??</h2>
+                    <h6>meter</h6>
+                </div>
+                <div class="card card2">
+                    <h2 id="wind">??</h2>
+                    <h6>m/s</h6>
+                </div>
+                <div class="card card3">
+                    <h2 id="msgWater"></h2>
+                </div>
+                <div class="card card4">
+                    <h2 id="msgWind"></h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+<script>
+    const api_url = "http://localhost:8081/reload/latest"
+  
+   async function get_data(a) { 
+       const response = await fetch(a)
+       var data = await response.json()
+       var water = data["status"]["water"]
+       var wind = data["status"]["Wind"]
+       var msgWater = data["waterMessage"]
+       var msgWind = data["windMessage"]
+       
+       document.getElementById("water").innerHTML = water;
+       document.getElementById("wind").innerHTML = wind; 
+       document.getElementById("msgWater").innerHTML = msgWater;
+       document.getElementById("msgWind").innerHTML = msgWind;
+       setTimeout(() => get_data(a), 1000*5)
+       
+  }
+  
+  get_data(api_url);
+</script>
