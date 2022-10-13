@@ -1,0 +1,64 @@
+{
+	"info": {
+		"_postman_id": "88d475be-7174-4aca-b264-49f5a66914a7",
+		"name": "Assignment 3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19370719"
+	},
+	"item": [
+		{
+			"name": "Create Data",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "water",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "wind",
+							"value": "10",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8081/reload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"reload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetLatestData",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/reload/latest",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"reload",
+						"latest"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
