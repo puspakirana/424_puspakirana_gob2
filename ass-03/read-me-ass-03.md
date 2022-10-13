@@ -1,4 +1,4 @@
-## How to run the app
+## How to run the application
 
 1. Download project
 2. Open in visual studio code / text editor
