@@ -1,0 +1,250 @@
+.overall
+{
+    display: flex;
+    flex-flow: column;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+main
+{
+    background: black;
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+#button {
+
+    background-color: #fff;
+    padding: 12px 30px;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 20px;
+    color: black;
+}
+
+/*footer*/
+
+footer
+{
+    background-color: black;
+    width: 100%;
+}
+
+.copyright
+{
+    display: flex;
+    font-size: 15px;
+    color: white;
+    padding: 20px;
+    justify-content: center;
+}
+
+/*svg*/
+.wrapper
+{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+}
+
+path
+{
+    stroke: #fff;
+    fill: #fff;
+    stroke-dasharray: 1800;
+    opacity: 10;
+    animation: animate 3s cubic-bezier(0,0.23,1,.1);
+}
+
+@keyframes animate
+{
+    100%
+    {
+        opacity: 0;
+        fill: rgba(255,255,255,1);
+        stroke-dasharray: 1800;
+    }
+    
+    90%
+    {
+        opacity: 10;
+        fill: rgba(255,255,255,0);
+        stroke-dasharray: 1800;
+    }
+    
+    30%
+    {
+        fill: none;
+    }
+    
+    0%
+    {
+        opacity: 10;
+        fill: none;
+        stroke-dashoffset: 1800;
+    }
+    
+}
+
+
+
+
+/*ABOUT*/
+
+.aboutheader
+{
+    background-image: url(../img/header.jpeg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    background-attachment: fixed;
+    text-align: center;
+}
+
+.text{
+    color: #fff;
+    font-weight: 700;
+    font-size: 20px;
+    margin-top: 40%;
+}
+
+/*svg*/
+.wrapper2
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 45%;
+}
+
+.bodyabout {
+    margin: 0;
+    padding: 40px 0;
+    text-align: center;
+    background-color: rgb(14, 13, 36);
+    color: white;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+
+
+/*social media*/
+
+.sctitle
+{
+    margin: 0;
+    padding: 0;
+}
+
+.scmedia
+{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-family: sans-serif;
+    flex-flow: column;
+}
+
+.scmediaicon
+{
+    display: flex;
+}
+
+.cardBox
+{
+    perspective: 500px;
+    margin: 15px;
+}
+
+.card
+{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    transform-style: preserve-3d;
+    transition: 0.5s ease;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+    border-radius: 50%;
+}
+
+.linkedin
+{
+    background: #0077B5;
+}
+
+.github
+{
+    background: #333;
+}
+
+
+.card-front
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    color: #fff;
+    backface-visibility: hidden;
+    display: flex;
+    font-size: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-back
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    font-size: 10px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    backface-visibility: hidden;
+}
+
+.cardBox:hover .card
+{
+    transform: rotateY(180deg);
+}
+
+.card-back
+{
+    transform: rotateY(180deg);
+}
+
+.scmedia div a
+{
+    text-decoration: none;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
