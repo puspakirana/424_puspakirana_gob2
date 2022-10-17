@@ -1,6 +1,7 @@
 package models
 
 import (
+	"errors"
 	"mygram/helpers"
 
 	"github.com/asaskevich/govalidator"
@@ -20,6 +21,11 @@ func (u *User) BeforeCreate(tx *gorm.DB) (err error) {
 
 	if errCreate != nil {
 		err = errCreate
+		return
+	}
+
+	if u.Age < 8 {
+		err = errors.New("You are too young!")
 		return
 	}
 

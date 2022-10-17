@@ -3,6 +3,7 @@ package database
 import (
 	"fmt"
 	"log"
+	"mygram/models"
 
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
@@ -30,7 +31,7 @@ func StartDB() {
 	}
 
 	fmt.Println("Sukses koneksi ke database")
-	// db.Debug().AutoMigrate(models.User{}, models.Photo{}, models.Comment{}, models.SocialMedia{})
+	db.Debug().AutoMigrate(models.User{}, models.Photo{}, models.Comment{}, models.SocialMedia{})
 
 }
 

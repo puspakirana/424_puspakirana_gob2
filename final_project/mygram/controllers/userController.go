@@ -8,6 +8,7 @@ import (
 
 	"strconv"
 
+	"github.com/dgrijalva/jwt-go"
 	"github.com/gin-gonic/gin"
 )
 
@@ -88,19 +89,19 @@ func UserLogin(c *gin.Context) {
 
 func UpdateUser(c *gin.Context) {
 	db := database.GetDB()
+	userData := c.MustGet("userData").(jwt.MapClaims)
 	contentType := helpers.GetContentType(c)
+	userId := uint(userData["id"].(float64))
 	User := models.User{}
-
-	userId, _ := strconv.Atoi(c.Param("userId"))
 
 	if contentType == appJSON {
 		c.ShouldBindJSON(&User)
 	} else {
 		c.ShouldBind(&User)
 	}
-	User.ID = uint(userId)
+	User.ID = userId
 
-	err := db.Model(&User).Where("id = ?", userId).Updates(models.User{Email: User.Email, Username: User.Username}).Error
+	err := db.Model(&User).Where("id = ?", userId).Updates(models.User{Email: User.Email, Username: User.Username, Age: User.Age}).Error
 
 	if err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{
@@ -115,6 +116,7 @@ func UpdateUser(c *gin.Context) {
 		"username": User.Username,
 		"age":      User.Age,
 	})
+
 }
 
 func DeleteUser(c *gin.Context) {
