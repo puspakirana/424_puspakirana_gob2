@@ -8,8 +8,8 @@ import (
 type Comment struct {
 	GormModel
 	Message string `json:"message" form:"message" valid:"required"`
-	UserID  uint
-	PhotoID uint
+	UserID  uint   `gorm:"foreignKey:User_Id" json:"user_id" form:"user_id" required:"true"`
+	PhotoID uint   `gorm:"foreignKey:Photo_Id" json:"photo_id" form:"photo_id" required:"true"`
 	User    *User
 	Photo   *Photo
 }
