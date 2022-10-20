@@ -68,3 +68,88 @@ Digunakan user untuk mengakses akunnya
 
 ### Response
 <img width="488" alt="DeletePhoto" src="https://user-images.githubusercontent.com/76604032/196944398-07b1d240-6598-4259-84e4-8fd975514611.png">
+
+
+## Comment
+
+1. Create Comment
+
+- Digunakan user untuk membuat comment
+- Disertai dengan autorisasi user (user harus login)
+
+### Response
+
+<img width="432" alt="CreateComment" src="https://user-images.githubusercontent.com/76604032/196953278-cb9e6459-9aef-4ae0-8523-106757a23d49.png">
+
+2. Get Comment
+
+- Digunakan user untuk melihat comment
+- Disertai dengan autorisasi user (user harus login)
+
+### Response
+
+<img width="390" alt="GetComment" src="https://user-images.githubusercontent.com/76604032/196953290-ca1b65d6-f112-4e52-af1f-9cf017000441.png">
+
+3. Update Comment
+
+- Digunakan user untuk mengupdate comment
+- Disertai dengan autorisasi user (user harus login)
+
+### Response
+
+<img width="442" alt="UpdateComment" src="https://user-images.githubusercontent.com/76604032/196953310-96dee33c-8794-482b-8e81-f3439a93381b.png">
+
+4. Delete Comment
+
+- Digunakan user untuk menghapus comment
+- Disertai dengan autorisasi user (user harus login)
+
+### Response
+
+<img width="457" alt="DeleteComment" src="https://user-images.githubusercontent.com/76604032/196953319-d2e5752a-b79f-4162-9d71-ed42424b214b.png">
+
+
+## Social Media
+
+1. Create Social Media
+
+- Digunakan user untuk membuat social media
+- Disertai dengan autorisasi user (user harus login)
+
+### Response
+
+<img width="475" alt="CreateSocialMedia" src="https://user-images.githubusercontent.com/76604032/196954627-94af4717-3983-44ea-8bab-7e47cf5df9a4.png">
+
+
+2. Get Social Media
+
+- Digunakan user untuk melihat comment
+- Disertai dengan autorisasi user (user harus login)
+
+### Response
+
+<img width="427" alt="GetSocialMedia" src="https://user-images.githubusercontent.com/76604032/196954638-9b32c809-44f0-47e6-af76-db538ff393bb.png">
+
+
+3. Update Social Media
+
+- Digunakan user untuk mengupdate comment
+- Disertai dengan autorisasi user (user harus login)
+
+### Response
+
+<img width="441" alt="UpdateSocialMedia" src="https://user-images.githubusercontent.com/76604032/196954643-062f3e6d-1ad6-45c8-99c3-18b5a63b6bbf.png">
+
+
+4. Delete Social Media
+
+- Digunakan user untuk menghapus comment
+- Disertai dengan autorisasi user (user harus login)
+
+### Response
+
+<img width="522" alt="DeleteSocialMedia" src="https://user-images.githubusercontent.com/76604032/196954646-43cbeaaf-8ffd-4f85-879d-8a83be146cf2.png">
+
+
+
+
